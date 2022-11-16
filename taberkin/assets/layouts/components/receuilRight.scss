@@ -1,0 +1,224 @@
+//Job_Kyungu_l
+//joblodo@cdo-global.ru
+
+
+// Design Page Right For List Of Receuil 
+
+.main-app  {
+      
+      &__section-left {
+        border: 1px solid $--border-Secondary-color;
+           border-top: none;
+           min-width: 35em;
+              height: 100vh; //Reserve
+      }
+}
+
+
+//Header
+.main-app  {
+    &__header  {
+        @include BetweenCenter();
+        padding: 0 0.60em;
+        border-bottom: 1px solid $--border-Secondary-color;
+        max-width: 100%;
+        min-height: 4em;
+    }
+
+    &__openMenu {
+        @include flexCenter();
+        @include ButtonHeader();
+    }
+
+
+    &__title-cantique {
+        @include reset();
+        font-size: 0.85em;
+        color: $--color-dark;
+    }
+
+    
+    &__container-btn {
+        @include flex();
+
+    }
+
+
+    &__button {
+        @include resetbtn();
+        @include ButtonHeader();
+    }
+
+
+    &__btnOne {
+        margin-right: 0.70em;
+    }
+}
+
+
+
+//Body Research
+.main-app  {
+
+    &__body {
+        margin-top: 0.35em;
+        padding: 0 0.30em;  
+    }
+
+
+    &__body-top {
+        position: relative;
+    }
+
+
+    &__search-cantique {
+        display: none;
+        // clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+         border: none;
+         outline: none;
+         border: 1px solid $--border-Secondary-color;
+         border-radius: 0.29em;
+         padding: 0.70em 0.50em;
+         padding-left: 1.85em;
+         min-width: 100%;
+
+         &::placeholder {
+            color: $--color--secondary-input;
+         }
+    }
+
+    &__span-input {
+        display: none;
+        position: absolute;
+        top: 1.2em;
+        left: 0.85em;
+        color: $--color--secondary-input;
+        font-size: 0.75em;
+        cursor: pointer;
+    }
+}
+
+
+
+//Middle millieu
+.main-app  {
+
+        &__body-middle {
+            padding-top: 0.35em;
+            margin-bottom: 0.50em;
+            // min-height: 37em; Reserve
+        }
+        
+        
+        &__list-chants {
+            @include resetList();
+            border: 1px solid $--border-Secondary-color;
+            border-radius:  0.29em;
+            overflow-y: scroll;
+            // height: 37em; Reserve
+            height: 37em;
+            
+            
+            &::-webkit-scrollbar-thumb {
+                background: #888; 
+                border-radius: 50em;
+            }
+            
+            &::-webkit-scrollbar {
+                width: 0.55em!important;
+                background: transparent;
+            }
+        }
+
+        &__chant  {
+            padding: 1em 0.55em;
+            max-width: 99.55%;
+            border-bottom: 1px solid $--border-Secondary-color;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            font-weight: 500;
+            color: $color-black-low;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+
+            &:hover {
+                color: $--background-color-blue;
+                background-color: rgb(241, 241, 241);;
+            }
+        }
+
+
+        &__numerote {
+            position: relative;
+            margin-right: 0.65em;
+            font-weight: 700;
+            color: $--background-color-blue;
+
+            &::after {
+                content:"";
+                position: absolute;
+                right: -0.5em;
+                bottom: 0.2em;
+                width: 0.20em;
+                height: 0.20em;
+                background-color: $--background-color-blue;
+            }
+        }
+}
+
+
+
+
+//Bottom Contact
+.main-app  {
+
+        &__body-bottom {
+            min-height: 3.80em;
+            min-width: 100%;
+        }
+
+        &__bottom-list  {
+           @include resetList();
+           @include BetweenCenter();
+           align-items: center;
+           padding: 0 2em;
+           min-height: 3.80em;
+        }
+
+        &__bottom-item {
+            padding: 0.65em;
+            border-radius: 50px;
+            border: 1px solid $--border-Secondary-color;
+            cursor: pointer;
+            background: transparent;
+            transition: background-color 0.5s ease-in-out;
+
+             > a {
+                 display: block;
+                 color: $--background-color-blue;
+                 color: $--color-pagraphe-footer;
+                 transition: color 0.3s linear;
+             }
+
+
+             &:hover {
+                 background-color: $--background-color-blue;
+
+                > a {
+                    color: $--link-color-low;
+                }
+             }
+        }
+}
+
+
+
+// Element in Toggle 
+.CacheSearch {//For Search
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    display: block;
+}
+
+.ElementIcon {// For Icon in Search
+    display: block;
+}

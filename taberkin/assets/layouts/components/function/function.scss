@@ -1,0 +1,111 @@
+//Job_Kyungu_L
+//joblodo@cdo-global.ru
+
+// Exportation The Function 
+
+
+
+//Mixins 
+@mixin flex {
+    display: flex;
+}
+
+@mixin flexAlign {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin Between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin BetweenAlign {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@mixin BetweenCenter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin Around {
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin AroundAlign {
+    display: flex;
+    align-items: center;
+}
+
+@mixin AroundCenter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+// Reset List > Ul , Ol ...
+@mixin resetList {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+//Reset Title
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+
+
+//Reset Link
+@mixin resetLink {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+//Reset Button 
+@mixin resetbtn  {
+    padding: 0;
+    border: none;
+    display: block;
+    outline: none;
+    text-align: center;
+    background: transparent;
+    cursor: pointer;
+    color: inherit;
+}
+
+// Design Button in Header
+@mixin ButtonHeader {
+    @include flexCenter();
+    padding: 0.38em 0 ;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius:  0.29em;
+    min-width: 2em;
+    color: $color-black-low;
+    transition: background-color 0.5s ease-in-out, 0.3s linear;
+
+     i {
+        font-size: 0.98em;
+     }
+
+    &:hover {
+        background-color: $--color-orange-low;
+        color: $--color-dark;
+    }
+}

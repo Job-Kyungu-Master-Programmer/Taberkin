@@ -1,0 +1,11 @@
+{
+  "name": "receuil",
+  "version": "1.0.0",
+  "description": "Receuil Des Cantiques Tabernacle De Kinshasa",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch assets/layouts/main.scss:./assets/css/style.css --style compressed"
+  },
+  "author": "Job_KL",
+  "license": "ISC"
+}

@@ -1,0 +1,98 @@
+//Job_Kyungu_L
+//joblodo@cdo-global.ru
+
+
+//Design Hero , Page for Presentation 
+.hero  {
+    @include flexAlign();
+    flex-direction: column;
+    padding-top: 16em;
+    max-width: 100%;
+    min-height: 100vh;
+    background-image:radial-gradient(rgba(0, 0, 0, 0.747),rgba(0, 0, 0, 0.699)),url('../img/bac2.jpeg');
+    background-position: 100% 20%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    color: #fff;
+
+
+    &__title {
+        @include reset();
+        margin-bottom: 0.86em;
+        font-size: 2.50em;
+        color: inherit;
+        word-spacing: 5px;
+        letter-spacing: 5px;
+        color: #fff;
+
+    }
+    
+    
+    &__sub-title{
+        color: $--text-color-header-hover-and-logo;
+        @include reset();
+        margin-bottom: 1.65em;
+    }
+
+
+    &__content {
+        position: relative;
+        @include reset();
+        @include flexCenter();
+        flex-direction: column;
+        margin-bottom: 8.60em;
+        line-height: 130%;
+        max-width: 50em;
+        text-align: center;
+        color: #fff;
+
+         > i {
+            content:"";
+            @include flexCenter();
+            position: absolute;
+            padding: 0.30em;
+            bottom: -5em;
+            border-radius: 50px;
+            font-size: 1em;
+            font-weight: 700;
+            border: 1px solid $--border-color-low;
+            cursor: pointer;
+            animation: ArrowHero 0.8s infinite;
+            transition: color 0.3s linear;
+
+            @keyframes ArrowHero {
+                0% {transform: translateY(0);}
+                50% {transform: translateY(0.25em); color: $--border-color-low;}
+            }
+            
+            &:hover {
+                color: $--text-color-header-hover-and-logo;
+            }
+        }
+    }
+
+    
+    &__link {
+        @include resetLink();
+        color: $--link-color-low;
+        padding: 0.70em 0.50em;
+        border-radius: 0.30em;
+        min-width: 8em;
+        text-align: center;
+        background: $--background-color-blue;
+        transition: background 0.5s ease-in-out;
+
+        
+        &:hover {
+            background:linear-gradient(to right, (rgb(14, 125, 168),rgb(250, 105, 105)));
+        }
+    }
+}
+
+
+
+
+.hero {
+     color: #303030
+}

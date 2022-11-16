@@ -1,0 +1,187 @@
+
+
+////////////////////////////////////////////////
+//                                            //
+//   __ joblodo@cdo-global.ru                 //
+//   __ Job-Kyungu-Lodo                       //
+//                                            // 
+//////////////////////////////////////////////// 
+
+
+.hero-app  {
+
+
+    &__header {
+        border-bottom: 1px solid $--border-Secondary-color;
+        @include flexAlign();
+    }
+
+
+    &__title-header {
+        font-size: 0.90em;
+        position: absolute;
+        left: 3em;
+        color: #333;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    
+    &-container__header {
+        position: relative;
+        @include resetList();
+        @include flexAlign();
+        justify-content: flex-end;
+        padding: 0 3em;
+        width: 100%;
+        min-height: 3.85em;
+    }
+
+
+    &-item__header  {
+        margin-left: 2em;
+        @include ButtonHeader();
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    
+
+    &-item__header-lang {
+        position: absolute;
+        top: 3.65em;
+        right: 7em;
+        box-shadow: 2px 2px 10px $--border-Secondary-color;
+        border: 1px solid $--border-Secondary-color;
+        background-color: $--colorWhitePage;
+        border-radius: 0.60em;
+        padding: 0.65em 1em;
+        height: 7em;
+        transform: scale(0);
+        transform-origin: top right;
+        transition: transform 0.5s ease-in-out;
+    }
+
+
+
+    &__flag {
+        width: 0.60em;
+        height: 0.60em;
+        object-fit: cover;
+    }
+
+
+
+    &-item__header-share {
+        position: absolute;
+        top: 3.55em;
+        box-shadow: 2px 2px 10px $--border-Secondary-color;
+        border: 1px solid $--border-Secondary-color;
+        background-color: $--colorWhitePage;
+        border-radius: 0.60em;
+        padding: 0.65em 1em;
+        height: 7em;
+        transform-origin: top right;
+        transform: scale(0);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    &-item__button {
+        @include resetbtn();
+        padding: 0.56em 0;
+        border-bottom: 1px solid $--border-Secondary-color;
+        transition: color 0.3s linear;
+
+        &:hover {
+            color: $--background-color-blue
+        }
+
+        ion-icon {transition: transform 0.5s ease-in-out;}
+
+        &:hover ion-icon {
+             transform: translateX(0.30em);
+        }
+    }
+}
+
+
+
+
+.para {
+    width: 20em;
+}
+
+
+//Hero-app Body  
+
+.hero-app  {
+    flex-grow: 1;
+      &__container {
+           @include flexCenter();
+           min-height: 44.92em;
+           background-color: $--border-Secondary-color;
+           
+      }
+
+
+      &__blog-center {
+          padding: 2em;
+          border: 1px solid $--border-Secondary-color;
+          border-radius: 2em;
+          background-color: $--colorWhitePage;
+          max-width: 90%;
+          min-height: 30em;
+      }
+
+
+      &-blog__image  {
+          @include flexCenter();
+          text-align: center;
+          margin: 0 auto;
+          width: 25%;
+          border-radius: 50%;
+          height: 17em;
+ 
+          > img {
+            object-fit: cover;
+            object-position: center center;
+            width: 100%;
+            height: 100%;
+          }
+      }
+
+
+
+      &-blog__text {
+         padding-top: 2em;
+         text-align: center;
+         color: #333;
+         line-height: 150%;
+      }
+
+
+      &-blog__title {
+        @include reset();
+        margin-bottom: 0.75em;
+      }
+
+
+      &-blog__content {
+        @include reset();
+      }
+}
+
+
+
+//Element Toggle in JS <> 
+
+.OpenMenuShare {
+     transform: scale(1);
+}
+
+.OpenMenuLanguage {
+    transform: scale(1);
+}

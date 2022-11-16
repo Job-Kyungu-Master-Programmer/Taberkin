@@ -1,0 +1,36 @@
+
+
+
+
+
+
+
+.main-app__section-menu {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       z-index: 50;
+       background-color: rgba(0, 0, 0, 0.966);
+
+       > i {
+          position: absolute;
+          top: 0.50em;
+          right: 1em;
+          font-size: 2em;
+          color: $--colorWhitePage;
+          cursor: pointer;
+          
+       }
+}
+
+
+
+.menu  {
+     background-color: $--colorWhitePage;
+     max-width: 30em;
+     height: 100%;
+     @include flex();
+     justify-content: center;
+}

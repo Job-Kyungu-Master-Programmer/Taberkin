@@ -1,0 +1,11 @@
+//Job_Kyungu_l
+//joblodo@cdo-global.ru
+
+// Design Page Receuil 
+
+.main-app  {
+ 
+      &__container {
+          @include flex();
+      }
+}
